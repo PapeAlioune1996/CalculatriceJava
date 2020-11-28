@@ -54,13 +54,7 @@ public class CalculatorTest {
             int min = calc.minElement(tab);
             if (min != 0) Assert.fail();
         }
-        //max tab
-      /*  @Test
-        public void testMaxElement(){
-            int tab[]= {2,1,3};
-            int max = calc.maxElement(tab);
-            if (max != 5) Assert.fail();
-        }*/
+
 
 
 }
