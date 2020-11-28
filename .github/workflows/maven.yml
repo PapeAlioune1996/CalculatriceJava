@@ -1,0 +1,29 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Publish Docker image
+on:
+  release:
+    types: [published]
+jobs:
+  push_to_registries:
+    name: Push Docker image to multiple registries
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: paalioune
+          password: 201607MUy
+          repository: my-docker-hub-namespace/my-docker-hub-repository
+          tag_with_ref: true
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v1
+        with:
+          username: PapeAlioune1996
+          password: 201607MUy
+          registry: docker.pkg.github.com
+          repository: my-org/my-repo/my-image
+          tag_with_ref: true
