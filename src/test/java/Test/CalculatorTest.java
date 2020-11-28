@@ -57,9 +57,9 @@ public class CalculatorTest {
         //max tab
         @Test
         public void testMaxElement(){
-            int tab[]= {2,1,5};
+            int tab[]= {2,1,4};
             int max = calc.maxElement(tab);
-            if (max != 5) Assert.fail();
+            if (max != 4) Assert.fail();
         }
 
 
