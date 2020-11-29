@@ -47,13 +47,7 @@ public class CalculatorTest {
             int max = calc.max(2000, -2000);
             Assert.assertEquals(2000,max);
         }
-        //min tab
-        @Test
-        public void testMinElement(){
-            int tab[]= {2,0,8};
-            int min = calc.minElement(tab);
-            if (min != 0) Assert.fail();
-        }
+
 
 
 
